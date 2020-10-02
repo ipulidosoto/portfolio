@@ -1,0 +1,729 @@
+*{
+  box-sizing: content-box;
+}
+
+body{
+  background: #031E28;
+}
+
+.icon {
+  color: #1383b0;
+  font-size: 4rem;
+  padding: 0 8px 8px 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  width: 100%;
+  height: 100vh;
+  background: #031E28;
+}
+
+.case-study {
+  background:#031E28;
+  color: #ffffff;
+  width: 100%;
+  margin: 0% auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.case-study h2 {
+  font-family: "Oswald";
+  font-weight: 100;
+  font-size: 3.4rem;
+  text-align: center;
+  margin: 0px;
+  padding: 16px;
+  position: relative;
+}
+
+/** GLITCH TITLE *
+.title{
+  position: relative;
+  z-index: 5;
+}
+
+.title::before, .title::after{
+  content: attr(data-text);
+  font-family: "Oswald";
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+}
+
+.title::before{
+  color: #FC284F;
+  animation: glitch-effect 10s linear infinite;
+}
+
+.title::after{
+  color: #1383b0;
+  animation: glitch-effect 10s linear infinite;
+}
+* FIN GLITCH TITLE **/
+
+.case-study p {
+  margin: 0px;
+}
+
+.cs-tags-style, .cs-tags-style a {
+  font-family: "Open sans";
+  color: #fc284f;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.cs-tags-style a:after{
+  content: " | ";
+}
+
+.cs-tags-style a:last-of-type:after{
+  content: "";
+}
+
+.social-networks-list{
+  display: flex;
+  margin-top: 24px;
+}
+
+.button{
+  border: 1px solid #1383b0;
+  border-radius: 8px;
+  width: 95%;
+  height: 60px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -1px 2px 3px rgba(255,255,255,0.15);
+}
+
+.button a{
+  text-decoration: none;
+  color: #1383b0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+.group-cs-img{
+  display: flex;
+  order: -1;
+}
+
+.cs-img-transition{
+  position: relative;
+}
+
+.cs-img-transition::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(top, rgba(19, 131, 176, 0.5) 0%, rgba(252, 40, 79, 0.5) 100%);
+  background: -webkit-linear-gradient(top, rgba(19, 131, 176, 0.5) 0%, rgba(252, 40, 79, 0.5) 100%);
+  background: -o-linear-gradient(top, rgba(19, 131, 176, 0.5) 0%, rgba(252, 40, 79, 0.5) 100%); 
+  background: -ms-linear-gradient(top, rgba(19, 131, 176, 0.5) 0%, rgba(252, 40, 79, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(19, 131, 176,0.5) 0%,rgba(252, 40, 79, 0.5) 100%);
+}
+
+.img-gradient img{
+  display:block;
+}
+
+.cs-img {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.cs-img img{
+  width: 100%;
+}
+
+#cover-img{
+  width: 70%;
+}
+
+.cs-number{
+  display: none;
+}
+
+.dot-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  z-index: 3;
+  top: 1vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #031E28;
+  width: 100%;
+}
+
+.dot {
+  width: 35px;
+  height: 35px;
+  border: 6px solid #FC284F;
+  border-radius: 50%;
+  margin: 16px;
+  cursor: pointer;
+}
+  
+.dot.active {
+  background: #FC284F;
+  cursor: default;
+}
+
+
+@media only screen and (min-width:376px) and (max-width: 413px){
+
+  .case-study h2 {
+    font-size: 3.5rem;
+  }
+
+  .cs-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:414px) and (max-width: 767px){
+
+  .case-study h2 {
+    font-size: 3rem;
+  }
+  
+  .cs-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (width: 768px){
+
+  .case-study h2 {
+    font-size: 5rem;
+  }
+  .cs-tags-style, .cs-tags-style a {
+    font-size: 2rem;
+  }
+  
+}
+
+@media only screen and (min-width:769px) and (max-width: 1024px){
+  
+  .icon{
+    font-size: 2rem;
+  }
+
+  .case-study{
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 79%;
+  }
+
+  .text-content{
+    align-items: flex-start;
+  }
+
+  .case-study h2 {
+    font-size: 3.5rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .cs-tags-style, .cs-tags-style a {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .button{
+    width: 276px;
+    height: 40px;
+  }
+
+  .button a{
+    font-size: 1.3rem;
+  }
+
+  .group-cs-img{
+    width: 65%;
+    order: 0;
+    position: relative;
+  }
+
+  .cs-img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .cs-number{
+    display: block;
+    font-family: "Oswald";
+    font-size: 4.5rem;
+    font-weight: 500;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    text-shadow: 0px 7px 10px #031E28;
+  }
+
+  .dot-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 12px;
+    top: 50vh;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:1025px) and (max-width: 1280px){
+
+  .square{
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon{
+    font-size: 2.5rem;
+  }
+
+  .dot-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+  }
+
+  .dot {
+    width: 16px;
+    height: 16px;
+    border: 6px solid #FC284F;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+    
+  .dot.active {
+    background: #FC284F;
+    cursor: default;
+  }
+  
+  .dot:last-child {
+    margin-bottom: 0;
+  }
+
+  .case-study{
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 84%;
+  }
+
+  .text-content{
+    align-items: flex-start;
+  }
+
+  .case-study h2 {
+    font-size: 4rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .cs-tags-style, .cs-tags-style a {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .button{
+    width: 276px;
+    height: 40px;
+  }
+
+  .button a{
+    font-size: 1.3rem;
+  }
+
+  .button:hover{
+    background: #1383b0;
+  }
+
+  .button:hover a{
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+
+  .group-cs-img{
+    width: 55%;
+    order: 0;
+    position: relative;
+  }
+
+  .cs-img {
+    width: 100%;
+    order: 0;
+    padding: 0;
+  }
+
+  .cs-number{
+    display: block;
+    font-family: "Oswald";
+    font-size: 4.5rem;
+    font-weight: 500;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    text-shadow: 0px 7px 10px #031E28;
+  }
+}
+
+@media only screen and (min-width:1281px) and (max-width: 1366px){
+
+  .icon{
+    font-size: 2.5rem;
+  }
+
+  .dot-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+  }
+
+  .dot {
+    width: 16px;
+    height: 16px;
+    border: 6px solid #FC284F;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+    
+  .dot.active {
+    background: #FC284F;
+    cursor: default;
+  }
+  
+  .dot:last-child {
+    margin-bottom: 0;
+  }
+
+  .case-study{
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 84%;
+  }
+
+  .text-content{
+    align-items: flex-start;
+  }
+
+  .case-study h2 {
+    font-size: 4rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .cs-tags-style, .cs-tags-style a {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .button{
+    width: 276px;
+    height: 40px;
+  }
+
+  .button a{
+    font-size: 1.3rem;
+  }
+
+  .button:hover{
+    background: #1383b0;
+  }
+
+  .button:hover a{
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+
+  .group-cs-img{
+    width: 55%;
+    order: 0;
+    position: relative;
+  }
+
+  .cs-img {
+    width: 100%;
+    order: 0;
+    padding: 0;
+  }
+
+  .cs-number{
+    display: block;
+    font-family: "Oswald";
+    font-size: 4.5rem;
+    font-weight: 500;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    text-shadow: 0px 7px 10px #031E28;
+  }
+}
+
+@media only screen and (min-width:1367px) and (max-width: 1440px){
+
+  .icon{
+    font-size: 2.5rem;
+  }
+
+  .dot-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+  }
+
+  .dot {
+    width: 16px;
+    height: 16px;
+    border: 6px solid #FC284F;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+    
+  .dot.active {
+    background: #FC284F;
+    cursor: default;
+  }
+  
+  .dot:last-child {
+    margin-bottom: 0;
+  }
+
+  .case-study{
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 84%;
+  }
+
+  .text-content{
+    align-items: flex-start;
+  }
+
+  .case-study h2 {
+    font-size: 4rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .cs-tags-style, .cs-tags-style a {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .button{
+    width: 276px;
+    height: 40px;
+  }
+
+  .button a{
+    font-size: 1.2rem;
+  }
+
+  .group-cs-img{
+    width: 60%;
+    order: 0;
+    position: relative;
+  }
+
+  .cs-img {
+    width: 100%;
+    order: 0;
+    padding: 0;
+  }
+
+  .cs-number{
+    display: block;
+    font-family: "Oswald";
+    font-size: 4.5rem;
+    font-weight: 500;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    text-shadow: 0px 7px 10px #031E28;
+  }
+
+} 
+
+@media only screen and (min-width: 1441px){
+
+  .icon{
+    font-size: 2.5rem;
+  }
+
+  .dot-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+  }
+
+  .dot {
+    width: 16px;
+    height: 16px;
+    border: 6px solid #FC284F;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+    
+  .dot.active {
+    background: #FC284F;
+    cursor: default;
+  }
+  
+  .dot:last-child {
+    margin-bottom: 0;
+  }
+
+  .case-study{
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 1200px;
+  }
+
+  .text-content{
+    align-items: flex-start;
+  }
+
+  .case-study h2 {
+    font-size: 4rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .cs-tags-style, .cs-tags-style a {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .button{
+    width: 276px;
+    height: 40px;
+  }
+
+  .button a{
+    font-size: 1.3rem;
+  }
+
+  .group-cs-img{
+    width: 60%;
+    order: 0;
+    position: relative;
+  }
+
+  .cs-img {
+    width: 100%;
+    order: 0;
+    padding: 0;
+  }
+
+.cs-number{
+  display: block;
+  font-family: "Oswald";
+  font-size: 4.5rem;
+  font-weight: 500;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  text-shadow: 0px 7px 10px #031E28;
+  }
+}
+
+
+@keyframes glitch-effect{
+  
+  0%{
+    left: -5px;
+    top: -5px;
+  }
+  25%{
+    left: 5px;
+    top: 0px;
+  }
+  50%{
+    left: -4px;
+    top: 5px;
+  }
+  75%{
+    left: 4px;
+    top: -4px;
+  }
+  100%{
+    left: 0px;
+    top: -4px;
+  }
+}
+
+
+/*** PROBLEMILLAS ***
+
+1. No he terminado la navegación
+2. La animación no se me hace infinita
